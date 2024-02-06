@@ -1,0 +1,43 @@
+﻿<Application x:Class="Squire.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Squire"
+             StartupUri="Views/MainWindow.xaml">
+   <Application.Resources>
+      <ResourceDictionary>
+         <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="UI/ThemeResources/CheckBox_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/ClosingButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/ComboBox_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/ComboBoxItem_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/dataGrid_ColumnHeader_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/DataGrid_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/DataGridCell_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/DataGridRow_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/HugeButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/NavigationButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/PasswordBox_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/PlainButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/RadioButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/RoundButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/ScrollBar_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/SearchBar_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/SecondaryButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/Slider_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/TextBox_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/ToggleButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/ToolTip_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/TransparentButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/WindowTools_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/SmoothNavigationButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/TestButton_theme.xaml"/>
+            <ResourceDictionary Source="UI/ThemeResources/ChameleonPlainButton_theme.xaml"/>
+         </ResourceDictionary.MergedDictionaries>
+         <Style BasedOn="{StaticResource TextboxStyle}" TargetType="TextBox"/>
+         <Style BasedOn="{StaticResource checkBox}" TargetType="CheckBox"/>
+         <Style BasedOn="{StaticResource ComboBoxStyle}" TargetType="ComboBox"/>
+         <Style BasedOn="{StaticResource ComboBoxItem}" TargetType="ComboBoxItem"/>
+         <Style BasedOn="{StaticResource ToolTipStyle}" TargetType="ToolTip"/>
+      </ResourceDictionary>
+   </Application.Resources>
+</Application>

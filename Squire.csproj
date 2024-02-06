@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PackageIcon></PackageIcon>
+    <ApplicationIcon>Assets\Logo\White_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\PenAndPage.png" />
+    <None Remove="Assets\Settings_dark.png" />
+    <None Remove="Assets\Terminal_dark.png" />
+    <None Remove="Assets\UpArrow.png" />
+    <None Remove="Assets\WindowTools\Close_dark.png" />
+    <None Remove="Assets\WindowTools\Close_light.png" />
+    <None Remove="Assets\WindowTools\maxStateMaximize_dark.png" />
+    <None Remove="Assets\WindowTools\maxStateMaximize_light.png" />
+    <None Remove="Assets\WindowTools\Minimize_dark.png" />
+    <None Remove="Assets\WindowTools\Minimize_light.png" />
+    <None Remove="Assets\WindowTools\nrmlStateMaximize_dark.png" />
+    <None Remove="Assets\WindowTools\nrmlStateMaximize_light.png" />
+    <None Remove="Fonts\MedievalSharp-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Logo\White_logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Logo\White_logo.png" />
+    <Resource Include="Assets\PenAndPage.png" />
+    <Resource Include="Assets\Settings_dark.png" />
+    <Resource Include="Assets\Terminal_dark.png" />
+    <Resource Include="Assets\UpArrow.png" />
+    <Resource Include="Assets\WindowTools\Close_dark.png" />
+    <Resource Include="Assets\WindowTools\Close_light.png" />
+    <Resource Include="Assets\WindowTools\maxStateMaximize_dark.png" />
+    <Resource Include="Assets\WindowTools\maxStateMaximize_light.png" />
+    <Resource Include="Assets\WindowTools\Minimize_dark.png" />
+    <Resource Include="Assets\WindowTools\Minimize_light.png" />
+    <Resource Include="Assets\WindowTools\nrmlStateMaximize_dark.png" />
+    <Resource Include="Assets\WindowTools\nrmlStateMaximize_light.png" />
+    <Resource Include="Fonts\MedievalSharp-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\Logo\White_logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
