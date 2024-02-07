@@ -11,6 +11,7 @@ namespace Squire.Views
    {
       private Prompt mainPage;
       private Settings? _settings;
+      private Infos? _info;
       public MainWindow()
       {
          InitializeComponent();
@@ -36,16 +37,22 @@ namespace Squire.Views
 
       private void WorkSpaceButton_Clicked(object sender, RoutedEventArgs e) { GOTO_Workspace(); }
       private void SettingsButton_Clicked(object sender, RoutedEventArgs e) { GOTO_Settings(); }
+      private void InfosButton_Checked(object sender, RoutedEventArgs e) { GOTO_Info(); }
       internal void GOTO_Workspace()
       {
          MainFrame.Content = mainPage;
+      }
+      internal void GOTO_Info()
+      {
+         _info ??= new();
+         MainFrame.Content = _info;
       }
       internal void GOTO_Settings()
       {
          _settings ??= new();
          MainFrame.Content = _settings;
-         GridLength dn = new GridLength(1, GridUnitType.Pixel);
       }
       #endregion
+
    }
 }

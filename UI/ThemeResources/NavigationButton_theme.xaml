@@ -18,8 +18,8 @@
                   <Border x:Name="border" Padding="0 0 4 0" CornerRadius="4"
                           Background="Transparent" BorderBrush="Transparent">
                      <Border.Effect>
-                        <DropShadowEffect x:Name="GlowEffect" ShadowDepth="3" Color="#03FCBA" 
-                                          Opacity=".07" BlurRadius="25" Direction="340"/>
+                        <DropShadowEffect x:Name="GlowEffect" ShadowDepth="5" Color="#03ffcd" 
+                                          Opacity=".06" BlurRadius="25" Direction="190"/>
                      </Border.Effect>
                      <Grid>
                         <Grid.RowDefinitions>
@@ -35,7 +35,8 @@
                         <ContentPresenter Name="MyContentPresenter" Grid.Column="1"
                                           Margin="{TemplateBinding Padding}" Width="27"
                                           HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                                          Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                                          Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          RenderOptions.BitmapScalingMode="Fant"/>
                         <TextBlock Grid.Row="1" Grid.Column="1" Text="{TemplateBinding Tag}"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="White"/>
                      </Grid>

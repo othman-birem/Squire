@@ -7,10 +7,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <PackageIcon></PackageIcon>
-    <ApplicationIcon>Assets\Logo\White_logo.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\Logo\CircledWhite_Logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Info.png" />
+    <None Remove="Assets\Logo\CircledWhite_Logo.png" />
     <None Remove="Assets\PenAndPage.png" />
     <None Remove="Assets\Settings_dark.png" />
     <None Remove="Assets\Terminal_dark.png" />
@@ -27,10 +29,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\Logo\White_logo.ico" />
+    <Content Include="Assets\Logo\CircledWhite_Logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Info.png" />
+    <Resource Include="Assets\Logo\CircledWhite_Logo.png" />
     <Resource Include="Assets\Logo\White_logo.png" />
     <Resource Include="Assets\PenAndPage.png" />
     <Resource Include="Assets\Settings_dark.png" />

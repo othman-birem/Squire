@@ -22,15 +22,25 @@
             <Button Style="{StaticResource TransparentButton}" HorizontalContentAlignment="Stretch"
                     Padding="10 0">
                <DockPanel LastChildFill="False">
-                  <Image Source="/Assets/Logo/White_Logo.png" Width="25" DockPanel.Dock="Left"/>
+                  <Image Source="/Assets/Logo/CircledWhite_Logo.png" Width="30" DockPanel.Dock="Left"/>
                   <TextBlock Text="New Prompt" Foreground="White" 
                              Margin="5 0" VerticalAlignment="Center"/>
                   <Image DockPanel.Dock="Right" Source="/Assets/PenAndPage.png" Width="20" Margin="5 0"/>
                </DockPanel>
             </Button>
             <UX:MyScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
-                               IsInertiaEnabled="True" IsPenetrating="False">
-               
+                               IsInertiaEnabled="True" IsPenetrating="False" Margin="0 20 0 0">
+               <StackPanel>
+                  <StackPanel Name="TodayPanel" Margin="0 0 0 10">
+                     <TextBlock Text="Today" Foreground="DarkGray"/>
+                  </StackPanel>
+                  <StackPanel Name="LastWeekPanel" Margin="0 0 0 10">
+                     <TextBlock Text="Last Week" Foreground="DarkGray"/>
+                  </StackPanel>
+                  <StackPanel Name="LastMonthPanel" Margin="0 0 0 10">
+                     <TextBlock Text="Last Month" Foreground="DarkGray"/>
+                  </StackPanel>
+               </StackPanel>
             </UX:MyScrollViewer>
          </StackPanel>
       </Border>
