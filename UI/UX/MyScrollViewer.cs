@@ -36,7 +36,7 @@ namespace Squire.UI.UX
             _totalVerticalOffset = VerticalOffset;
             currentVerticalOffset = VerticalOffset;
          }
-         _totalVerticalOffset = Math.Min(Math.Max(0, _totalVerticalOffset - e.Delta * 2), ScrollableHeight);
+         _totalVerticalOffset = Math.Min(Math.Max(0, _totalVerticalOffset - e.Delta), ScrollableHeight);
          ScrollToVerticalOffsetWithAnimation(_totalVerticalOffset);
       }
       internal void scrollToTopInternal(double milliseconds = 300)
@@ -73,7 +73,7 @@ namespace Squire.UI.UX
          set { SetValue(IsPenetratingProperty, value); }
       }
 
-      protected override HitTestResult HitTestCore(PointHitTestParameters hitTestParameters) =>
+      protected override HitTestResult? HitTestCore(PointHitTestParameters hitTestParameters) =>
           IsPenetrating ? null : base.HitTestCore(hitTestParameters);
 
       public static readonly DependencyProperty IsInertiaEnabledProperty = DependencyProperty.Register(
@@ -105,7 +105,7 @@ namespace Squire.UI.UX
             ctl.ScrollToHorizontalOffset(v);
          }
       }
-      public void ScrollToVerticalOffsetWithAnimation(double verticalOffset, double duration = 350)
+      public void ScrollToVerticalOffsetWithAnimation(double verticalOffset, double duration = 500)
       {
          DoubleAnimation animation = CreateAnimation(verticalOffset, duration);
 

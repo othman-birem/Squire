@@ -1,0 +1,17 @@
+﻿<DockPanel x:Class="Squire.UI.Controls.QueryPanel"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+           xmlns:local="clr-namespace:Squire.UI.Controls"
+           mc:Ignorable="d" Loaded="StackPanel_Loaded"
+           Height="auto" Name="Query">
+   <Image Source="/Assets/ManUser.png" Width="30"
+          VerticalAlignment="Top" Margin="20 10 15 10"/>
+   <TextBlock Foreground="White" Margin="0 10" Padding="0 0 20 0"
+              TextWrapping="Wrap" FontFamily="/Fonts/#cabin" LineHeight="22">
+      <Run Name="PeerLine" FontSize="15" FontWeight="Bold"/>
+      <LineBreak/>
+      <Run Text="{Binding ElementName=Query, Path=Text}" FontSize="14"/>
+   </TextBlock>
+</DockPanel>

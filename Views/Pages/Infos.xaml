@@ -10,7 +10,9 @@
       FontFamily="/Fonts/#cabin" Foreground="White">
 
    <Grid>
-      <TextBlock Text="Infos" FontSize="25"
-                 HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      <StackPanel Name="MotherPanel" Margin="40">
+         <Image Source="/Assets/Logo/CircledWhite_logo.png" Opacity=".1"
+                Height="{Binding ElementName=MotherPanel, Path=ActualHeight}"/>
+      </StackPanel>
    </Grid>
 </Page>

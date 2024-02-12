@@ -66,7 +66,7 @@
                          Checked="SettingsButton_Clicked" GroupName="Nav_Buttons">
                <Image Source="/Assets/Settings_dark.png"/>
             </RadioButton>
-            <RadioButton Name="InfosButton" Style="{StaticResource NavigationButton}" Tag="Settings"
+            <RadioButton Name="InfosButton" Style="{StaticResource NavigationButton}" Tag="Info"
                          Checked="InfosButton_Checked"  GroupName="Nav_Buttons">
                <Image Source="/Assets/Info.png"/>
             </RadioButton>

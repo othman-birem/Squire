@@ -13,6 +13,7 @@
   <ItemGroup>
     <None Remove="Assets\Info.png" />
     <None Remove="Assets\Logo\CircledWhite_Logo.png" />
+    <None Remove="Assets\ManUser.png" />
     <None Remove="Assets\PenAndPage.png" />
     <None Remove="Assets\Settings_dark.png" />
     <None Remove="Assets\Terminal_dark.png" />
@@ -25,6 +26,14 @@
     <None Remove="Assets\WindowTools\Minimize_light.png" />
     <None Remove="Assets\WindowTools\nrmlStateMaximize_dark.png" />
     <None Remove="Assets\WindowTools\nrmlStateMaximize_light.png" />
+    <None Remove="Fonts\Cabin-Bold.ttf" />
+    <None Remove="Fonts\Cabin-BoldItalic.ttf" />
+    <None Remove="Fonts\Cabin-Italic.ttf" />
+    <None Remove="Fonts\Cabin-Medium.ttf" />
+    <None Remove="Fonts\Cabin-MediumItalic.ttf" />
+    <None Remove="Fonts\Cabin-Regular.ttf" />
+    <None Remove="Fonts\Cabin-SemiBold.ttf" />
+    <None Remove="Fonts\Cabin-SemiBoldItalic.ttf" />
     <None Remove="Fonts\MedievalSharp-Regular.ttf" />
   </ItemGroup>
 
@@ -36,6 +45,7 @@
     <Resource Include="Assets\Info.png" />
     <Resource Include="Assets\Logo\CircledWhite_Logo.png" />
     <Resource Include="Assets\Logo\White_logo.png" />
+    <Resource Include="Assets\ManUser.png" />
     <Resource Include="Assets\PenAndPage.png" />
     <Resource Include="Assets\Settings_dark.png" />
     <Resource Include="Assets\Terminal_dark.png" />
@@ -48,6 +58,14 @@
     <Resource Include="Assets\WindowTools\Minimize_light.png" />
     <Resource Include="Assets\WindowTools\nrmlStateMaximize_dark.png" />
     <Resource Include="Assets\WindowTools\nrmlStateMaximize_light.png" />
+    <Resource Include="Fonts\Cabin-Bold.ttf" />
+    <Resource Include="Fonts\Cabin-BoldItalic.ttf" />
+    <Resource Include="Fonts\Cabin-Italic.ttf" />
+    <Resource Include="Fonts\Cabin-Medium.ttf" />
+    <Resource Include="Fonts\Cabin-MediumItalic.ttf" />
+    <Resource Include="Fonts\Cabin-Regular.ttf" />
+    <Resource Include="Fonts\Cabin-SemiBold.ttf" />
+    <Resource Include="Fonts\Cabin-SemiBoldItalic.ttf" />
     <Resource Include="Fonts\MedievalSharp-Regular.ttf" />
   </ItemGroup>
 

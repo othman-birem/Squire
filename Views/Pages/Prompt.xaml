@@ -20,11 +20,11 @@
       <Border Background="#202020">
          <StackPanel Margin="10">
             <Button Style="{StaticResource TransparentButton}" HorizontalContentAlignment="Stretch"
-                    Padding="10 0">
+                    Padding="10 0" Height="40" Click="NewPromptButton_Clicked">
                <DockPanel LastChildFill="False">
                   <Image Source="/Assets/Logo/CircledWhite_Logo.png" Width="30" DockPanel.Dock="Left"/>
-                  <TextBlock Text="New Prompt" Foreground="White" 
-                             Margin="5 0" VerticalAlignment="Center"/>
+                  <TextBlock Text="New Prompt" Foreground="White" Margin="5 0" 
+                             VerticalAlignment="Center"/>
                   <Image DockPanel.Dock="Right" Source="/Assets/PenAndPage.png" Width="20" Margin="5 0"/>
                </DockPanel>
             </Button>
@@ -45,18 +45,27 @@
          </StackPanel>
       </Border>
       <Border Grid.Column="1" Background="#272727">
-         <StackPanel VerticalAlignment="Bottom">
-            <Grid>
-               
-            </Grid>
-            <DockPanel FlowDirection="RightToLeft">
-               <Button Style="{StaticResource SecondaryButton}" Padding="0" Margin="10 0">
+         <Grid>
+            <Grid.RowDefinitions>
+               <RowDefinition/>
+               <RowDefinition Height="auto" MinHeight="60"/>
+            </Grid.RowDefinitions>
+            <UX:MyScrollViewer x:Name="InteractionScroller" Margin="0 0 0 10"
+                               HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                               VerticalAlignment="Bottom" IsInertiaEnabled="True" IsPenetrating="True">
+               <StackPanel x:Name="InteractionPanel"/>
+            </UX:MyScrollViewer>
+            <DockPanel Grid.Row="1" FlowDirection="RightToLeft">
+               <Button Name="SubmissionButton" Style="{StaticResource SecondaryButton}" 
+                       Padding="0" Margin="10 7 10 15"
+                       IsEnabled="False" Click="SubmissionButton_Click">
                   <Image Source="/Assets/UpArrow.png" Margin="3"/>
                </Button>
-               <TextBox Grid.Row="1" Margin="0 15 10 15" FontSize="16" TextWrapping="Wrap"
-                        Tag="Type Your Request" FlowDirection="LeftToRight"/>
+               <TextBox Name="PromptBox" Margin="0 7 10 15" FontSize="16" TextWrapping="Wrap"
+                        Tag="Type Your Request" FlowDirection="LeftToRight" 
+                        TextChanged="TextBox_TextChanged" KeyDown="PromptBox_KeyDown"/>
             </DockPanel>
-         </StackPanel>
+         </Grid>
       </Border>
    </Grid>
 </Page>
