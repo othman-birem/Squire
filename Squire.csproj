@@ -42,6 +42,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Assets\Info.png" />
     <Resource Include="Assets\Logo\CircledWhite_Logo.png" />
     <Resource Include="Assets\Logo\White_logo.png" />

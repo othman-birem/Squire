@@ -4,13 +4,14 @@
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
            xmlns:local="clr-namespace:Squire.UI.Controls"
-           mc:Ignorable="d" Loaded="StackPanel_Loaded"
+           mc:Ignorable="d"
            Height="auto" Name="Query">
-   <Image Source="/Assets/ManUser.png" Width="30"
+   <Image Source="{Binding ElementName=Query, Path=Picture}" Width="30"
           VerticalAlignment="Top" Margin="20 10 15 10"/>
    <TextBlock Foreground="White" Margin="0 10" Padding="0 0 20 0"
               TextWrapping="Wrap" FontFamily="/Fonts/#cabin" LineHeight="22">
-      <Run Name="PeerLine" FontSize="15" FontWeight="Bold"/>
+      <Run Name="PeerLine" FontSize="15" FontWeight="Bold"
+           Text="{Binding ElementName=Query, Path=Peer}"/>
       <LineBreak/>
       <Run Text="{Binding ElementName=Query, Path=Text}" FontSize="14"/>
    </TextBlock>

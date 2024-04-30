@@ -53,9 +53,9 @@
                            <BeginStoryboard>
                               <Storyboard>
                                  <DoubleAnimation Storyboard.TargetName="SidelineBorder" Storyboard.TargetProperty="Height"
-                                                  To="30" Duration="0:0:1">
+                                                  To="30" Duration="0:0:0.6">
                                     <DoubleAnimation.EasingFunction>
-                                       <BounceEase/>
+                                       <CubicEase/>
                                     </DoubleAnimation.EasingFunction>
                                  </DoubleAnimation>
                                  <DoubleAnimation Storyboard.TargetName="MyContentPresenter" Storyboard.TargetProperty="Width"

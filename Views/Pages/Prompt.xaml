@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:UX="clr-namespace:Squire.UI.UX"
+      xmlns:Controls="clr-namespace:Squire.UI.Controls"
       xmlns:local="clr-namespace:Squire.Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -17,7 +18,7 @@
          <ColumnDefinition/>
       </Grid.ColumnDefinitions>
 
-      <Border Background="#202020">
+      <Border Background="#272727" CornerRadius="5 0 0 0">
          <StackPanel Margin="10">
             <Button Style="{StaticResource TransparentButton}" HorizontalContentAlignment="Stretch"
                     Padding="10 0" Height="40" Click="NewPromptButton_Clicked">
@@ -31,20 +32,19 @@
             <UX:MyScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
                                IsInertiaEnabled="True" IsPenetrating="False" Margin="0 20 0 0">
                <StackPanel>
-                  <StackPanel Name="TodayPanel" Margin="0 0 0 10">
-                     <TextBlock Text="Today" Foreground="DarkGray"/>
-                  </StackPanel>
-                  <StackPanel Name="LastWeekPanel" Margin="0 0 0 10">
-                     <TextBlock Text="Last Week" Foreground="DarkGray"/>
-                  </StackPanel>
-                  <StackPanel Name="LastMonthPanel" Margin="0 0 0 10">
-                     <TextBlock Text="Last Month" Foreground="DarkGray"/>
-                  </StackPanel>
+                  <TextBlock Text="Today" Foreground="DarkGray"/>
+                  <StackPanel Name="TodayPanel" Margin="0 0 0 10"/>
+                  
+                  <TextBlock Text="Last Week" Foreground="DarkGray"/>
+                  <StackPanel Name="LastWeekPanel" Margin="0 0 0 10"/>
+                  
+                  <TextBlock Text="Last Month" Foreground="DarkGray"/>
+                  <StackPanel Name="LastMonthPanel" Margin="0 0 0 10"/>
                </StackPanel>
             </UX:MyScrollViewer>
          </StackPanel>
       </Border>
-      <Border Grid.Column="1" Background="#272727">
+      <Border Grid.Column="1" Background="#323232">
          <Grid>
             <Grid.RowDefinitions>
                <RowDefinition/>
