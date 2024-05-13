@@ -10,8 +10,8 @@
           VerticalAlignment="Top" Margin="20 10 15 10"/>
    <TextBlock Foreground="White" Margin="0 10" Padding="0 0 20 0"
               TextWrapping="Wrap" FontFamily="/Fonts/#cabin" LineHeight="22">
-      <Run Name="PeerLine" FontSize="15" FontWeight="Bold"
-           Text="{Binding ElementName=Query, Path=Peer}"/>
+      <Run Name="PeerLine" FontSize="15" FontWeight="Bold"/>
+           <!--Text="{Binding ElementName=Query, Path=Peer}"-->
       <LineBreak/>
       <Run Text="{Binding ElementName=Query, Path=Text}" FontSize="14"/>
    </TextBlock>

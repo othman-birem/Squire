@@ -14,13 +14,13 @@
 
    <Grid>
       <Grid.ColumnDefinitions>
-         <ColumnDefinition Width="300"/>
+         <ColumnDefinition Width="250"/>
          <ColumnDefinition/>
       </Grid.ColumnDefinitions>
 
       <Border Background="#272727" CornerRadius="5 0 0 0">
          <StackPanel Margin="10">
-            <Button Style="{StaticResource TransparentButton}" HorizontalContentAlignment="Stretch"
+            <Button Name="NewDiscussionButton" Style="{StaticResource TransparentButton}" HorizontalContentAlignment="Stretch"
                     Padding="10 0" Height="40" Click="NewPromptButton_Clicked">
                <DockPanel LastChildFill="False">
                   <Image Source="/Assets/Logo/CircledWhite_Logo.png" Width="30" DockPanel.Dock="Left"/>
@@ -32,13 +32,13 @@
             <UX:MyScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
                                IsInertiaEnabled="True" IsPenetrating="False" Margin="0 20 0 0">
                <StackPanel>
-                  <TextBlock Text="Today" Foreground="DarkGray"/>
+                  <TextBlock Text="Today" Foreground="DarkGray" Margin="10, 0"/>
                   <StackPanel Name="TodayPanel" Margin="0 0 0 10"/>
                   
-                  <TextBlock Text="Last Week" Foreground="DarkGray"/>
+                  <TextBlock Text="Last Week" Foreground="DarkGray" Margin="10, 0"/>
                   <StackPanel Name="LastWeekPanel" Margin="0 0 0 10"/>
                   
-                  <TextBlock Text="Last Month" Foreground="DarkGray"/>
+                  <TextBlock Text="Last Month" Foreground="DarkGray" Margin="10, 0"/>
                   <StackPanel Name="LastMonthPanel" Margin="0 0 0 10"/>
                </StackPanel>
             </UX:MyScrollViewer>
@@ -50,10 +50,19 @@
                <RowDefinition/>
                <RowDefinition Height="auto" MinHeight="60"/>
             </Grid.RowDefinitions>
+            <StackPanel Name="GreetingPanel"
+                        HorizontalAlignment="Center" VerticalAlignment="Center">
+               <Image Source="/Assets/Logo/CircledWhite_Logo.png" Height="60"/>
+               <TextBlock Margin="0 10 0 0" FontSize="20"
+                          FontWeight="Bold">
+                  How Can I help you today?
+               </TextBlock>
+            </StackPanel>
             <UX:MyScrollViewer x:Name="InteractionScroller" Margin="0 0 0 10"
                                HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
                                VerticalAlignment="Bottom" IsInertiaEnabled="True" IsPenetrating="True">
-               <StackPanel x:Name="InteractionPanel"/>
+               <StackPanel x:Name="InteractionPanel"
+                           SizeChanged="InteractionPanel_SizeChanged"/>
             </UX:MyScrollViewer>
             <DockPanel Grid.Row="1" FlowDirection="RightToLeft">
                <Button Name="SubmissionButton" Style="{StaticResource SecondaryButton}" 

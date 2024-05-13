@@ -11,7 +11,6 @@ namespace Squire.Helpers
       public DateTime Date { get; set; } = DateTime.Now;
       public static readonly string PATH_TO_COLLECTION = DirectorySurfer.GetDatabasePath() + "\\Discussions.json";
 
-
       public Discussion(QueryPanel panel) 
       {
          Title = panel.Text;
@@ -19,7 +18,15 @@ namespace Squire.Helpers
       }
       public Discussion() { }
 
-      internal void Save()
+      public static List<Discussion> GetDB()
+      {
+         using(StreamReader reader = new StreamReader(PATH_TO_COLLECTION))
+         {
+            string data = reader.ReadToEnd();
+            return string.IsNullOrEmpty(data) ? new List<Discussion>() : new(JsonConvert.DeserializeObject<List<Discussion>>(data));
+         }
+      }
+      internal List<Discussion> Save()
       {
          if (!File.Exists(PATH_TO_COLLECTION))
          {
@@ -35,17 +42,20 @@ namespace Squire.Helpers
          using StreamWriter writer = new(PATH_TO_COLLECTION);
          data = JsonConvert.SerializeObject(discussions, Formatting.Indented);
          writer.Write(data);
+         return discussions;
       }
       internal void AddMessage(QueryPanel panel)
       {
-         Title = panel.Text;
+         Title = Messages.Count == 0 ? panel.Text : Title;
          Messages.Add(new Message { Text = panel.Text, peer = panel.Peer });
       }
+
+
    }
 
-   class Message
+   internal class Message
    {
       public string Text { get; set; }
-      public string peer { get; set; }
+      public QueryPanel.Peers peer { get; set; }
    }
 }

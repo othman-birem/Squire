@@ -23,14 +23,14 @@ namespace Squire.UI.Controls
          get { return (string)GetValue(TextProperty); }
          set { SetValue(TextProperty, value); }
       }
-      public static readonly DependencyProperty PeerProperty = DependencyProperty.Register("Peer", typeof(string), typeof(QueryPanel), new PropertyMetadata("NULL"));
-      public string Peer
+      public static readonly DependencyProperty PeerProperty = DependencyProperty.Register("Peer", typeof(Peers), typeof(QueryPanel), new PropertyMetadata(Peers.You));
+      public Peers Peer
       {
-          get { return (string)GetValue(PeerProperty); }
+          get { return (Peers)GetValue(PeerProperty); }
           set { SetValue(PeerProperty, value); }
       }
 
-      internal enum Peers { SQuire, You }
+      public enum Peers { SQuire, You }
       private static readonly string[] Pictures = new string[2]
       {
          "/Assets/ManUser.png",
@@ -44,7 +44,7 @@ namespace Squire.UI.Controls
       internal QueryPanel(string text, Peers peer)
       {
          InitializeComponent();
-         Peer = peer.ToString();
+         PeerLine.Text = peer.ToString();
          if (peer == Peers.You)
          {
             Picture = new BitmapImage(new Uri(Pictures[0], UriKind.Relative));
