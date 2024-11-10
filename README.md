@@ -15,4 +15,4 @@ git clone https://github.com/yourusername/squire.git
 Run the WPF app, enter natural language commands, and `SQUIRE` will generate SQL queries on the fly.
 Suitable for those looking to interact with SQL databases without needing deep knowledge of SQL syntax.
 ### Contributing
-Contributions are welcome! Feel free to open issues and submit pull requests to enhance Squire.
+Contributions are welcome! Feel free to open issues and submit pull requests to enhance `SQUIRE`.
